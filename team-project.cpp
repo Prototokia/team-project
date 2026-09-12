@@ -3,7 +3,6 @@
 // === БЛОК ПОДКЛЮЧЕНИЙ: каждый участник добавляет свой заголовочный файл ===
 #include "team-project.h"
 #include "vazhev.h"
-// #include "petrov.h"
 // === КОНЕЦ БЛОКА ПОДКЛЮЧЕНИЙ ===
 int main() {
 	setlocale(LC_ALL, "Rus");
@@ -23,19 +22,28 @@ int main() {
 		case 3: {
 			std::cout << "Введите количество секунд: ";
 			std::cin >> sec;
-			std::cout << "В " << sec << " секундах " << hoursOf(sec) << " часов.\n";
+
+			if (sec < 0) std::cout << "Количество секунд не может быть отрицательным\n";
+			else std::cout << "В " << sec << " секундах " << hoursOf(sec) << " часов.\n";
+
 			break;
 		}
 		case 4: {
 			std::cout << "Введите количество секунд: ";
 			std::cin >> sec;
-			std::cout << "В " << sec << " секундах " << minutesOf(sec) << " минут.\n";
+
+			if (sec < 0) std::cout << "Количество секунд не может быть отрицательным\n";
+			else std::cout << "В " << sec << " секундах " << minutesOf(sec) << " минут.\n";
+
 			break;
 		}
 		case 5: {
 			std::cout << "Введите количество секунд: ";
 			std::cin >> sec;
-			std::cout << "В " << sec << " секундах " << minutesOf(sec) << " секунд.\n";
+
+			if (sec < 0) std::cout << "Количество секунд не может быть отрицательным\n";
+			else std::cout << "В " << sec << " секундах " << minutesOf(sec) << " секунд.\n";
+
 			break;
 		}
 			
@@ -45,6 +53,8 @@ int main() {
 		default:
 			std::cout << "Такого пункта нет.\n";
 		}
-	} while (choice != 0);
+	} 
+	while (choice != 0);
+
 	return 0;
 }
