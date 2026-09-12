@@ -6,7 +6,6 @@
 // #include "petrov.h"
 // #include "sidorova.h"
 // === КОНЕЦ БЛОКА ПОДКЛЮЧЕНИЙ ===
-
 // ===== Главная функция: меню =====
 int main() {
 	setlocale(LC_ALL, "Rus");

@@ -5,7 +5,7 @@ double kgToLb(double kg) {
 	return kg * KG_TO_LB;
 }
 
-// Конвертер величин: фунты -> килограммы
+// Конвертер величин: фунты -> килограммы 
 double lbToKg(double lb) {
 	return lb / KG_TO_LB;
 }
