@@ -1,9 +1,9 @@
-п»ї# CMakeList.txt: РїСЂРѕРµРєС‚ CMake РґР»СЏ team-project; РІРєР»СЋС‡РёС‚Рµ РёСЃС…РѕРґРЅС‹Р№ РєРѕРґ Рё РѕРїСЂРµРґРµР»РµРЅРёСЏ,
-# СѓРєР°Р¶РёС‚Рµ Р·РґРµСЃСЊ Р»РѕРіРёРєСѓ РґР»СЏ РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ РїСЂРѕРµРєС‚Р°.
+# CMakeList.txt: проект CMake для team-project; включите исходный код и определения,
+# укажите здесь логику для конкретного проекта.
 #
 cmake_minimum_required (VERSION 3.10)
 
-# Р’РєР»СЋС‡РµРЅРёРµ РіРѕСЂСЏС‡РµР№ РїРµСЂРµР·Р°РіСЂСѓР·РєРё РґР»СЏ РєРѕРјРїРёР»СЏС‚РѕСЂРѕРІ MSVC, РµСЃР»Рё РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ.
+# Включение горячей перезагрузки для компиляторов MSVC, если поддерживается.
 if (POLICY CMP0141)
   cmake_policy(SET CMP0141 NEW)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
@@ -11,11 +11,11 @@ endif()
 
 project ("team-project")
 
-# Р”РѕР±Р°РІСЊС‚Рµ РёСЃС‚РѕС‡РЅРёРє РІ РёСЃРїРѕР»РЅСЏРµРјС‹Р№ С„Р°Р№Р» СЌС‚РѕРіРѕ РїСЂРѕРµРєС‚Р°.
-add_executable (team-project "team-project.cpp" "team-project.h")
+# Добавьте источник в исполняемый файл этого проекта.
+add_executable (team-project "team-project.cpp" "team-project.h" "filippov.cpp" "filippov.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET team-project PROPERTY CXX_STANDARD 20)
 endif()
 
-# TODO: Р”РѕР±Р°РІСЊС‚Рµ С‚РµСЃС‚С‹ Рё С†РµР»РµРІС‹Рµ РѕР±СЉРµРєС‚С‹, РµСЃР»Рё СЌС‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ.
+# TODO: Добавьте тесты и целевые объекты, если это необходимо.
