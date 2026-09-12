@@ -1,4 +1,4 @@
 #pragma once 
-// функции варианта 66 (Филиппов С. Н.)
+// С„СѓРЅРєС†РёРё РІР°СЂРёР°РЅС‚Р° 66 (Р¤РёР»РёРїРїРѕРІ РЎ. Рќ.)
 double kgToLb(double kg);
 double lbToKg(double lb);
