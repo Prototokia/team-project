@@ -12,7 +12,7 @@ endif()
 project ("team-project")
 
 # Добавьте источник в исполняемый файл этого проекта.
-add_executable (team-project "team-project.cpp" "team-project.h" "filippov.cpp" "filippov.h")
+add_executable (team-project "team-project.cpp" "team-project.h" "filippov.cpp" "filippov.h" "vazhev.cpp" "vazhev.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET team-project PROPERTY CXX_STANDARD 20)
