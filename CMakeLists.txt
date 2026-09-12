@@ -1,4 +1,4 @@
-﻿# CMakeList.txt: проект CMake для team-project; включите исходный код и определения,
+# CMakeList.txt: проект CMake для team-project; включите исходный код и определения,
 # укажите здесь логику для конкретного проекта.
 #
 cmake_minimum_required (VERSION 3.10)
@@ -12,10 +12,10 @@ endif()
 project ("team-project")
 
 # Добавьте источник в исполняемый файл этого проекта.
-add_executable (team-project "team-project.cpp" "team-project.h")
+add_executable (team-project "team-project.cpp" "team-project.h" "filippov.cpp" "filippov.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET team-project PROPERTY CXX_STANDARD 20)
-endif()
+endif() 
 
 # TODO: Добавьте тесты и целевые объекты, если это необходимо.
