@@ -6,6 +6,7 @@
 // #include "petrov.h"
 // === КОНЕЦ БЛОКА ПОДКЛЮЧЕНИЙ ===
 int main() {
+	setlocale(LC_ALL, "Rus");
 	int choice;
 	int sec;
 	do {
@@ -19,19 +20,19 @@ int main() {
 		std::cout << "Выберите пункт: ";
 		std::cin >> choice;
 		switch (choice) {
-		case 1: {
+		case 3: {
 			std::cout << "Введите количество секунд: ";
 			std::cin >> sec;
 			std::cout << "В " << sec << " секундах " << hoursOf(sec) << " часов.\n";
 			break;
 		}
-		case 2: {
+		case 4: {
 			std::cout << "Введите количество секунд: ";
 			std::cin >> sec;
 			std::cout << "В " << sec << " секундах " << minutesOf(sec) << " минут.\n";
 			break;
 		}
-		case 3: {
+		case 5: {
 			std::cout << "Введите количество секунд: ";
 			std::cin >> sec;
 			std::cout << "В " << sec << " секундах " << minutesOf(sec) << " секунд.\n";
