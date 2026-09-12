@@ -1,4 +1,3 @@
-#pragma once
 #ifndef FILIPPOV_H
 #define FILIPPOV_H
 
